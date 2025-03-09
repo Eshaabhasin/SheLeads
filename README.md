@@ -1,1 +1,2 @@
 # TripGenie
+React+TailwindCSS
