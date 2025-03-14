@@ -13,11 +13,12 @@ function Features() {
                 </div>
                 </NavLink>
                 {/* Card 2 */}
+                <NavLink to='/expense'>
                 <div className="bg-[#2A2A2A] border border-[#5A5A5A] rounded-lg shadow-lg p-6 text-white w-72 transition-transform transform hover:scale-105">
                     <h3 className="text-xl font-semibold mb-2">Expense Tracker</h3>
                     <p className="text-gray-400">Description of Feature 2</p>
                 </div>
-
+                </NavLink>
                 {/* Card 3 */}
                 <div className="bg-[#2A2A2A] border border-[#5A5A5A] rounded-lg shadow-lg p-6 text-white w-72 transition-transform transform hover:scale-105">
                     <h3 className="text-xl font-semibold mb-2">Investment</h3>
