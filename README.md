@@ -1,3 +1,3 @@
-# TripGenie
+# SheLeads
 React+TailwindCSS
-Personalized trip Planning
+
