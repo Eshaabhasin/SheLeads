@@ -11,6 +11,8 @@ import { VideoRoom2 } from './Components/VideoNewPage/VideoRoom2';
 import Chatbot from './Components/Chatbot/Chatbot';
 import Personalized from './Components/Personalized/Personalized';
 import Expense from './Components/Expense/Expense';
+import FinancialQuiz from './Components/FinancialQuiz/FinancialQuiz';
+import InvestmentTracker from './Components/InvestmentTracker/InvestmentTracker';
 import './App.css';
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
         <Route path="/chatbot" element={<Chatbot />} />
         <Route path="/personalized" element={<Personalized />} />
         <Route path="/expense" element={<Expense/>} />
+        <Route path="/finance-quiz" element={<FinancialQuiz/>} />
+        <Route path="/investment" element={<InvestmentTracker/>} />
       </Routes>
     </Router>
   );

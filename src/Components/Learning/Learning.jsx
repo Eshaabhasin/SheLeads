@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import for navigation
 import Chatbot from "../Chatbot/Chatbot"; // Import the chatbot component
 
 export default function FinanceLearningTracker() {
   const [selectedLevel, setSelectedLevel] = useState("Beginner");
   const [chatbotOpen, setChatbotOpen] = useState(false);
   const [completedVideos, setCompletedVideos] = useState({});
+  const navigate = useNavigate(); // Hook for navigation
 
   // Sample videos for each level
   const videos = {
@@ -47,7 +49,7 @@ export default function FinanceLearningTracker() {
     <div className="w-[900px] px-4 py-6 bg-black text-white relative">
       <h1 className="text-3xl font-bold text-center mb-6">📈 Finance Learning Tracker</h1>
 
-      {/* Level Selector + FinTalk Button */}
+      {/* Level Selector + FinTalk + Quiz Button */}
       <div className="flex justify-center space-x-6 mb-8">
         {["Beginner", "Intermediate", "Advanced"].map((level) => (
           <button
@@ -68,6 +70,14 @@ export default function FinanceLearningTracker() {
         >
           FinTalk 💬
         </button>
+
+        {/* Quiz Button - Redirects to Quiz Component */}
+        <button
+          className="px-6 py-3 rounded-lg text-lg font-semibold bg-yellow-500 text-white hover:bg-yellow-600 transition"
+          onClick={() => navigate("/finance-quiz")} // Navigate to the quiz page
+        >
+          Quiz 🎯
+        </button>
       </div>
 
       {/* Progress Tracker */}
@@ -81,7 +91,7 @@ export default function FinanceLearningTracker() {
         {Math.round(getProgress(selectedLevel))}% Completed
       </p>
 
-      {/* Learning Videos Section (Row-wise) */}
+      {/* Learning Videos Section */}
       <div className="space-y-6">
         {videos[selectedLevel].map((video, index) => (
           <div key={index} className="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
