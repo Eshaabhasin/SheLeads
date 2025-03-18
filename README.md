@@ -22,7 +22,6 @@ She Leads is an innovative platform designed to empower women with financial lit
 - **Frontend**: React (Vite), Tailwind CSS  
 - **Backend**: Node.js, Express.js  
 - **Database**: MongoDB  
-- **Authentication**: Clerk  
 - **Hosting**: Vercel 
 - **AI Integration**: Gemini API
 
